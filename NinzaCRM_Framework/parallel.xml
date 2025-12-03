@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="parallel.xml">
+
+<listeners >
+<listener class-name="org.ninjacrm.listners.ListnerImplementation"></listener>
+</listeners>
+  <test thread-count="9" parallel="classes" name="Test">
+    <classes>
+      <class name="org.ninjacrm.createcampaign.CreateCampaignWithMandatoryField"/>
+      <class name="org.ninjacrm.leads.CreateLeadsWithMandatoryField"/>
+      <class name="org.ninjacrm.contacts.CreateContactWithAllField"/>
+      <class name="org.ninjacrm.leads.CreateLeadsWithoutField"/>
+      <class name="org.ninjacrm.contacts.CreateContactWithMandatory"/>
+      <class name="org.ninjacrm.contacts.CreateContactWithoutField"/>
+      <class name="org.ninjacrm.createcampaign.CreateCampaignWithAllField"/>
+      <class name="org.ninjacrm.createcampaign.CreateCampaignWithoutData"/>
+      <class name="org.ninjacrm.leads.CreateLeadsWithAllField"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- parallel.xml -->
