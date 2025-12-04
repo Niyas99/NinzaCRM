@@ -42,13 +42,13 @@ public class BaseClass {
         settings.setExperimentalOption("prefs", prefs);
 
 //        // Jenkins-compatible headless flags
-//        settings.addArguments("--headless=new");   // required for Jenkins
-//        settings.addArguments("--disable-gpu");
-//        settings.addArguments("--no-sandbox");
-//        settings.addArguments("--disable-dev-shm-usage");
-//        settings.addArguments("--window-size=1920,1080");
-//        settings.addArguments("--disable-notifications");
-//        settings.addArguments("--disable-extensions");
+        settings.addArguments("--headless=new");   // required for Jenkins
+        settings.addArguments("--disable-gpu");
+        settings.addArguments("--no-sandbox");
+        settings.addArguments("--disable-dev-shm-usage");
+        settings.addArguments("--window-size=1920,1080");
+        settings.addArguments("--disable-notifications");
+        settings.addArguments("--disable-extensions");
 
 
         String browser = plib.getPropertyData("Browser");
