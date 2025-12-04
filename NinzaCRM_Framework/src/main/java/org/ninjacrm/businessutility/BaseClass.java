@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -35,29 +36,47 @@ public class BaseClass {
 
     @BeforeClass
     public void beforeClass() throws Throwable {
-        ChromeOptions settings = new ChromeOptions();
+    	ChromeOptions settings = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("profile.password_manager_leak_detection", false);
-        settings.addArguments("--start-maximized");
         settings.setExperimentalOption("prefs", prefs);
+
+        // Jenkins-compatible headless flags
+        settings.addArguments("--headless=new");   // required for Jenkins
+        settings.addArguments("--disable-gpu");
+        settings.addArguments("--no-sandbox");
+        settings.addArguments("--disable-dev-shm-usage");
+        settings.addArguments("--window-size=1920,1080");
+        settings.addArguments("--disable-notifications");
+        settings.addArguments("--disable-extensions");
 
         String browser = plib.getPropertyData("Browser");
 
-        if (browser.equals("chrome")) {
+        if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver(settings);
-        } else if (browser.equals("edge")) {
-            driver = new EdgeDriver();
+
+        } else if (browser.equalsIgnoreCase("edge")) {
+            // Edge also needs headless mode
+            EdgeOptions edgeOptions = new EdgeOptions();
+            edgeOptions.addArguments("--headless=new");
+            edgeOptions.addArguments("--disable-gpu");
+            edgeOptions.addArguments("--no-sandbox");
+            edgeOptions.addArguments("--disable-dev-shm-usage");
+            edgeOptions.addArguments("--window-size=1920,1080");
+
+            driver = new EdgeDriver(edgeOptions);
+
         } else {
             driver = new ChromeDriver(settings);
         }
 
-        sDriver=driver;
-        wlib.pageMaximize(driver);
+        sDriver = driver;
+
+        wlib.pageMaximize(driver);   // This is ignored in headless but safe
         wlib.waitForPageLoad(driver);
 
         loginPage = new LoginPage(driver);
-        homePage = new HomePage(driver);
-    }
+        homePage = new HomePage(driver);    }
 
     @BeforeMethod
     public void beforeMethod() throws Throwable {
