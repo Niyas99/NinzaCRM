@@ -9,7 +9,7 @@
       <class name="org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest"/>
       <class name="org.ninjacrm.contacts.CreateContactWithMandatoryTest"/>
       <class name="org.ninjacrm.contacts.CreateContactWithAllFieldTest"/>
-      <class name="org.ninjacrm.contacts.CreateContactWithoutFieldTest"/>
+      <class name="org.ninjacrm.contacts.CreateContactWithoutFieldTest"/> 
       <class name="org.ninjacrm.createcampaign.CreateCampaignWithoutDataTest"/>
       <class name="org.ninjacrm.leads.CreateLeadsWithoutFieldTest"/>
     </classes>
