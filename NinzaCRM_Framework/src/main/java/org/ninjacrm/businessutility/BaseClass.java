@@ -90,13 +90,15 @@ public class BaseClass {
 
         loginPage.getUserNameTextfield().sendKeys(userName);
         loginPage.getPasswordTextfield().sendKeys(password);
-        loginPage.getSignInButton().click();
+        wlib.safeClick(driver, loginPage.getSignInButton());
+//        loginPage.getSignInButton().click();
     }
 
     @AfterMethod
     public void afterMethod() {
-        wlib.clickableWait(driver, homePage.getProfileIcon());
-        wlib.clickableWait(driver, homePage.getLogOutLink());
+    	wlib.safeClick(driver, homePage.getProfileIcon());
+    	wlib.safeClick(driver, homePage.getLogOutLink());
+    
     }
 
     @AfterClass
