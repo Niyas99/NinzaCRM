@@ -26,7 +26,6 @@ public class CreateCampaignWithMandatoryFieldTest extends BaseClass{
 	    String date = elib.getDataFromExcel("Campaign", 1, 3);
 	    
 		homePage.getCampaignsLink().click();
-		Assert.assertEquals("hi", "");
 		
 		//Create Campaign
 		CreateCampaignPage campaign= new CreateCampaignPage(driver);
