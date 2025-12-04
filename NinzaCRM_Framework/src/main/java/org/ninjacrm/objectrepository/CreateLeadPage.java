@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CreateLeadPage {
+	WebDriverUtility wlib= new WebDriverUtility();
 	public CreateLeadPage(WebDriver driver){
 		PageFactory.initElements(driver, this);
 	}
@@ -174,8 +175,9 @@ public class CreateLeadPage {
 
 	public void createLeadsAllFields(WebDriver driver , String leadName , String company, String leadSource, String industry, String anualReview, String noOfEmp, String phone, String email, String secondaryEmail, String leadStatus, String rating, String assignedTo, String address, String city, String country, String postalCode, String Website, String campaign,String description) throws InterruptedException {
 		
-		WebDriverUtility wlib= new WebDriverUtility();
-		createLeadButton.click();
+		
+//		createLeadButton.click();
+		wlib.safeClick(driver, createLeadButton);
 		leadNameTextfield.sendKeys(leadName);
 		companyTextfield.sendKeys(company);
 		leadSourceTextfield.sendKeys(leadSource);
@@ -196,43 +198,51 @@ public class CreateLeadPage {
 		countryTextField.sendKeys(country);
 		postalCodeTextField.sendKeys(postalCode);
 		websiteTextField.sendKeys(Website);
-		campaignSelectButton.click();
+		
+		wlib.safeClick(driver, campaignSelectButton);
+//		campaignSelectButton.click();
 		
 		wlib.switchToWindow(driver);
 		Thread.sleep(2000);
 		campaignSearchTextfield.sendKeys(campaign);
 		Thread.sleep(2000);
-		SelectButton.click();
+		wlib.safeClick(driver, SelectButton);
+//		SelectButton.click();
 		wlib.switchToWindow(driver);
 		descriptionTextfield.sendKeys(description);
-		createButton.click();
+		wlib.safeClick(driver, createButton);
+//		createButton.click();
 		
 		
 	}
 	public void createLeadsMandatoryFields(WebDriver driver , String leadName , String company, String leadSource, String industry,String phone,String leadStatus,String campaign) throws Throwable {
 			
-			WebDriverUtility wlib= new WebDriverUtility();
-			createLeadButton.click();
+			
+//			createLeadButton.click();
+			wlib.safeClick(driver, createLeadButton);
 			leadNameTextfield.sendKeys(leadName);
 			companyTextfield.sendKeys(company);
 			leadSourceTextfield.sendKeys(leadSource);
 			industryTextfield.sendKeys(industry);
 			phoneTextfield.sendKeys(phone);
 			leadStatusTextfield.sendKeys(leadStatus);
-			campaignSelectButton.click();
+			wlib.safeClick(driver, campaignSelectButton);
+//			campaignSelectButton.click();
 			
 			wlib.switchToWindow(driver);
 			Thread.sleep(2000);
 			campaignSearchTextfield.sendKeys(campaign);
 			Thread.sleep(2000);
-			SelectButton.click();
+			wlib.safeClick(driver, SelectButton);
+//			SelectButton.click();
 			wlib.switchToWindow(driver);
-			createButton.click();		
+			wlib.safeClick(driver, createButton);
+//			createButton.click();		
 			
 	}
-	public void createLeadsNoFields() {		
-		createLeadButton.click();
-		createButton.click();
+	public void createLeadsNoFields(WebDriver driver) {		
+		wlib.safeClick(driver, createLeadButton);
+		wlib.safeClick(driver, createButton);
 		
 		
 	}

@@ -29,7 +29,7 @@ public class CreateCampaignWithMandatoryFieldTest extends BaseClass{
 		
 		//Create Campaign
 		CreateCampaignPage campaign= new CreateCampaignPage(driver);
-		campaign.createCampaignMandotoryFeild(campaignName, tagetSize, date);
+		campaign.createCampaignMandotoryFeild(driver,campaignName, tagetSize, date);
 
 		wlib.elementVisiblity(driver, homePage.getToastMessage());
 		String actualResult = homePage.getToastMessage().getText();

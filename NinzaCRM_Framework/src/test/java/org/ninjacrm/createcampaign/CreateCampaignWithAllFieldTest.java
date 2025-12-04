@@ -35,7 +35,7 @@ public class CreateCampaignWithAllFieldTest extends BaseClass{
 		
 		//Click Campaign
 		CreateCampaignPage campaign = new CreateCampaignPage(driver);
-		campaign.createCampaignAllFeild(campaignName, tagetSize, dateActual, campaignStatus, targetAudience, description);
+		campaign.createCampaignAllFeild(driver,campaignName, tagetSize, dateActual, campaignStatus, targetAudience, description);
 		
 		wlib.elementVisiblity(driver, homePage.getToastMessage());
 		String actualResult = homePage.getToastMessage().getText();

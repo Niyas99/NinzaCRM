@@ -15,7 +15,7 @@ public class CreateLeadsWithoutFieldTest extends BaseClass {
 		
 		//create Leads
 		CreateLeadPage leadPage= new CreateLeadPage(driver);
-		leadPage.createLeadsNoFields();
+		leadPage.createLeadsNoFields(driver);
 		
 
 	}

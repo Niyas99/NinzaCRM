@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CreateContactPage {
+	WebDriverUtility wlib = new WebDriverUtility();
 	
 	public CreateContactPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -97,8 +98,8 @@ public class CreateContactPage {
 
 	
 	public void createContactAllField(WebDriver driver,String organization,String title,String department,String officePhone,String contactName,String mobile,String email,String campaign) throws Throwable {
-		WebDriverUtility wlib = new WebDriverUtility();
-		createContactButton.click();
+		wlib.safeClick(driver, createContactButton);
+//		createContactButton.click();
 		organizationNameTextfield.sendKeys(organization);
 		titleTextfield.sendKeys(title);
 		departmentTextfield.sendKeys(department);
@@ -106,7 +107,8 @@ public class CreateContactPage {
 		contactNameTextfield.sendKeys(contactName);
 		mobileTextField.sendKeys(mobile);
 		emailTextfield.sendKeys(email);
-		campaignSelectButton.click();
+		wlib.safeClick(driver, campaignSelectButton);
+//		campaignSelectButton.click();
 		
 		
 		
@@ -114,36 +116,42 @@ public class CreateContactPage {
 		Thread.sleep(2000);
 		campaignSearchTextfield.sendKeys(campaign);
 		Thread.sleep(2000);
-		selectButton.click();
+		wlib.safeClick(driver, selectButton);
+//		selectButton.click();
 		wlib.switchToWindow(driver);
-		createButton.click();
+		wlib.safeClick(driver, createButton);
+//		createButton.click();
 		
 	}
 	
 	
 	public void createContactMandatoryField(WebDriver driver,String organization,String title,String contactName,String mobile,String campaign) throws Throwable {
-		WebDriverUtility wlib = new WebDriverUtility();
-		createContactButton.click();
+		wlib.safeClick(driver, createContactButton);
+//		createContactButton.click();
 		organizationNameTextfield.sendKeys(organization);
 		titleTextfield.sendKeys(title);
 		contactNameTextfield.sendKeys(contactName);
 		mobileTextField.sendKeys(mobile);
-		campaignSelectButton.click();
+		wlib.safeClick(driver, campaignSelectButton);
+//		campaignSelectButton.click();
 		
 		wlib.switchToWindow(driver);
 		Thread.sleep(2000);
 		campaignSearchTextfield.sendKeys(campaign);
 		Thread.sleep(2000);
-		selectButton.click();
+		wlib.safeClick(driver, selectButton);
+//		selectButton.click();
 		wlib.switchToWindow(driver);
-		createButton.click();
+		wlib.safeClick(driver, createButton);
+//		createButton.click();
 		
 	}
 	
-	public void createContactNoField() {
+	public void createContactNoField(WebDriver driver) {
 
-		createContactButton.click();
-		createButton.click();
+		wlib.safeClick(driver, createContactButton);
+		wlib.safeClick(driver, createButton);
+		
 		
 	}
 

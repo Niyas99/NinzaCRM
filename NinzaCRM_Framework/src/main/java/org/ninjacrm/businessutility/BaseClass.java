@@ -50,6 +50,7 @@ public class BaseClass {
         settings.addArguments("--disable-notifications");
         settings.addArguments("--disable-extensions");
 
+
         String browser = plib.getPropertyData("Browser");
 
         if (browser.equalsIgnoreCase("chrome")) {
@@ -57,14 +58,14 @@ public class BaseClass {
 
         } else if (browser.equalsIgnoreCase("edge")) {
             // Edge also needs headless mode
-            EdgeOptions edgeOptions = new EdgeOptions();
-            edgeOptions.addArguments("--headless=new");
-            edgeOptions.addArguments("--disable-gpu");
-            edgeOptions.addArguments("--no-sandbox");
-            edgeOptions.addArguments("--disable-dev-shm-usage");
-            edgeOptions.addArguments("--window-size=1920,1080");
+//            EdgeOptions edgeOptions = new EdgeOptions();
+//            edgeOptions.addArguments("--headless=new");
+//            edgeOptions.addArguments("--disable-gpu");
+//            edgeOptions.addArguments("--no-sandbox");
+//            edgeOptions.addArguments("--disable-dev-shm-usage");
+//            edgeOptions.addArguments("--window-size=1920,1080");
 
-            driver = new EdgeDriver(edgeOptions);
+            driver = new EdgeDriver();
 
         } else {
             driver = new ChromeDriver(settings);

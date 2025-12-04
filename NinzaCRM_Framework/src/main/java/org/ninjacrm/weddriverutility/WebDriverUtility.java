@@ -3,6 +3,8 @@ package org.ninjacrm.weddriverutility;
 import java.time.Duration;
 import java.util.Set;
 
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -40,6 +42,15 @@ public class WebDriverUtility {
 	public void elementVisiblity(WebDriver driver, WebElement ele) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(ele));
+	}
+	public void safeClick(WebDriver driver, WebElement element) {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	        wait.until(ExpectedConditions.elementToBeClickable(element));
+	        element.click();
+	    } catch (ElementClickInterceptedException e) {
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+	    }
 	}
 	
 }

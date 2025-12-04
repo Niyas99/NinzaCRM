@@ -15,7 +15,7 @@ public class CreateContactWithoutFieldTest extends BaseClass{
 		
 		//create contact
 		CreateContactPage contactPage=new CreateContactPage(driver);
-		contactPage.createContactNoField();
+		contactPage.createContactNoField(driver);
 
 	}
 

@@ -16,7 +16,7 @@ public class CreateCampaignWithoutDataTest extends BaseClass{
 		
 		//create Campaign
 		CreateCampaignPage campaign = new CreateCampaignPage(driver);
-		campaign.createCampaignWithNoFeild();
+		campaign.createCampaignWithNoFeild(driver);
 		
 
 	}

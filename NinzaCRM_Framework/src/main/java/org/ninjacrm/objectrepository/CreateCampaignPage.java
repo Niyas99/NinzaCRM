@@ -1,5 +1,6 @@
 package org.ninjacrm.objectrepository;
 
+import org.ninjacrm.weddriverutility.WebDriverUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ public class CreateCampaignPage {
 	public CreateCampaignPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	WebDriverUtility wlib=new WebDriverUtility();
 	
 	@FindBy(xpath="//span[.='Create Campaign']")
 	private WebElement createCampaignButton;
@@ -60,8 +62,10 @@ public class CreateCampaignPage {
 		return createButton;
 	}
 	
-	public void createCampaignAllFeild(String campaignName,String tagetSize,String dateActual,String campaignStatus,String targetAudience,String description) {
-		createCampaignButton.click();
+	public void createCampaignAllFeild(WebDriver driver ,String campaignName,String tagetSize,String dateActual,String campaignStatus,String targetAudience,String description) {
+		
+		wlib.safeClick(driver, createCampaignButton);
+//		createCampaignButton.click();
 		campaignNameTextfield.sendKeys(campaignName);
 		
 		targetSizeTextfield.clear();
@@ -71,24 +75,27 @@ public class CreateCampaignPage {
 		campaignStatusTextfield.sendKeys(campaignStatus);
 		targetAudienceTextfield.sendKeys(targetAudience);
 		descriptionTextField.sendKeys(description);
-		createButton.click();
+		wlib.safeClick(driver, createButton);
+//		createButton.click();
 		
 	}
-	public void createCampaignMandotoryFeild(String campaignName,String tagetSize,String dateActual) {
-		createCampaignButton.click();
+	public void createCampaignMandotoryFeild(WebDriver driver,String campaignName,String tagetSize,String dateActual) {
+//		createCampaignButton.click();
+		wlib.safeClick(driver, createCampaignButton);
 		campaignNameTextfield.sendKeys(campaignName);
 		
 		targetSizeTextfield.clear();
 		targetSizeTextfield.sendKeys(tagetSize);
 		
 		expectedCloseDateTextfield.sendKeys(dateActual);
-		createButton.click();
+//		createButton.click();
+		wlib.safeClick(driver, createButton);
 		
 	}
 	
-	public void createCampaignWithNoFeild() {
-		createCampaignButton.click();
-		createButton.click();
+	public void createCampaignWithNoFeild(WebDriver driver) {
+		wlib.safeClick(driver, createCampaignButton);
+		wlib.safeClick(driver, createButton);
 		
 	}
 	
