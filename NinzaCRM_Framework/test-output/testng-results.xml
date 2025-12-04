@@ -8,38 +8,38 @@
       <![CDATA[>>>>>>>>>>>>>>>>>>>>>>>>>>>>Test Execution Success<<<<<<<<<<<<<<<<<<<<<<<]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-12-04T12:25:20 IST" name="Default suite" finished-at="2025-12-04T12:25:29 IST" duration-ms="9360">
+  <suite started-at="2025-12-04T12:57:29 IST" name="Default suite" finished-at="2025-12-04T12:57:37 IST" duration-ms="8340">
     <groups>
     </groups>
-    <test started-at="2025-12-04T12:25:20 IST" name="Default test" finished-at="2025-12-04T12:25:29 IST" duration-ms="9360">
+    <test started-at="2025-12-04T12:57:29 IST" name="Default test" finished-at="2025-12-04T12:57:37 IST" duration-ms="8340">
       <class name="org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7d20d0b]" started-at="2025-12-04T12:25:20 IST" name="beforeSuite" finished-at="2025-12-04T12:25:20 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7bedc48a]" started-at="2025-12-04T12:57:29 IST" name="beforeSuite" finished-at="2025-12-04T12:57:29 IST" duration-ms="9" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Connection Established]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7d20d0b]" started-at="2025-12-04T12:25:20 IST" name="beforeClass" finished-at="2025-12-04T12:25:21 IST" duration-ms="1536" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7bedc48a]" started-at="2025-12-04T12:57:29 IST" name="beforeClass" finished-at="2025-12-04T12:57:31 IST" duration-ms="1587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7d20d0b]" started-at="2025-12-04T12:25:21 IST" name="beforeMethod" finished-at="2025-12-04T12:25:25 IST" duration-ms="3444" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7bedc48a]" started-at="2025-12-04T12:57:31 IST" name="beforeMethod" finished-at="2025-12-04T12:57:33 IST" duration-ms="2682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="createCampaignWithAllFieldTest()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7d20d0b]" started-at="2025-12-04T12:25:25 IST" name="createCampaignWithAllFieldTest" finished-at="2025-12-04T12:25:27 IST" duration-ms="2182" status="PASS">
+        <test-method signature="createCampaignWithAllFieldTest()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7bedc48a]" started-at="2025-12-04T12:57:33 IST" name="createCampaignWithAllFieldTest" finished-at="2025-12-04T12:57:36 IST" duration-ms="2417" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[>>>>>>>>>>>>>>>>>>>>>>>>>>>>Test Execution Success<<<<<<<<<<<<<<<<<<<<<<<]]>
             </line>
           </reporter-output>
         </test-method> <!-- createCampaignWithAllFieldTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7d20d0b]" started-at="2025-12-04T12:25:27 IST" name="afterMethod" finished-at="2025-12-04T12:25:28 IST" duration-ms="1490" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7bedc48a]" started-at="2025-12-04T12:57:36 IST" name="afterMethod" finished-at="2025-12-04T12:57:37 IST" duration-ms="929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7d20d0b]" started-at="2025-12-04T12:25:28 IST" name="afterClass" finished-at="2025-12-04T12:25:29 IST" duration-ms="677" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:org.ninjacrm.createcampaign.CreateCampaignWithAllFieldTest@7bedc48a]" started-at="2025-12-04T12:57:37 IST" name="afterClass" finished-at="2025-12-04T12:57:37 IST" duration-ms="687" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

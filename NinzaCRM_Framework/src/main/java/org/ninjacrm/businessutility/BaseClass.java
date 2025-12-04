@@ -38,6 +38,7 @@ public class BaseClass {
         ChromeOptions settings = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("profile.password_manager_leak_detection", false);
+        settings.addArguments("--start-maximized");
         settings.setExperimentalOption("prefs", prefs);
 
         String browser = plib.getPropertyData("Browser");
