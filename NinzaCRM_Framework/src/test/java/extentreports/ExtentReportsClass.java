@@ -28,7 +28,7 @@ public class ExtentReportsClass {
 		test.log(Status.PASS, "Testcases Pass");
 		
 		
-		
+		//hr
 		//step 6 : call flush() to write data into the report
 		extentReports.flush();
 		
