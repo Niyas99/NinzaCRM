@@ -43,6 +43,7 @@ public class WebDriverUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(ele));
 	}
+	
 	public void safeClick(WebDriver driver, WebElement element) {
 	    try {
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

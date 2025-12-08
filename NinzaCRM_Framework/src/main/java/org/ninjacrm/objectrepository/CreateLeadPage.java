@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class CreateLeadPage {
 	WebDriverUtility wlib= new WebDriverUtility();
@@ -228,6 +229,7 @@ public class CreateLeadPage {
 			leadStatusTextfield.sendKeys(leadStatus);
 			wlib.safeClick(driver, campaignSelectButton);
 //			campaignSelectButton.click();
+			
 			
 			wlib.switchToWindow(driver);
 			Thread.sleep(2000);
